@@ -2,49 +2,47 @@ import Header from "../../app/components/Header";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen p-6 bg-gray-50">
+    <main className="min-h-screen p-6 bg-gray-50 bg-gradient-to-b from-pink-50 to-white">
       <Header />
-      <section className="text-center py-20">
-        <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-        <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
-          We would love to hear from you! Reach out to us for any inquiries or
-          appointment bookings.
+      <section className="text-center py-20 ">
+        <h1 className="text-4xl font-bold mb-6">Kontakta Oss</h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          Vi skulle gärna höra från dig! Kontakta oss för frågor eller bokning
+          av behandling.
         </p>
       </section>
 
       <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Contact Info */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Get in Touch
+            Kom i Kontakt
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            You can reach us by phone, email, or by filling out the contact form
-            below.
+            Du kan nå oss via telefon, e-post eller genom att fylla i formuläret
+            nedan.
           </p>
 
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-700">Email</h3>
+            <h3 className="text-xl font-semibold text-gray-700">E-post</h3>
             <p className="text-lg text-gray-500">kajberg@massage.com</p>
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-700">Phone</h3>
+            <h3 className="text-xl font-semibold text-gray-700">Telefon</h3>
             <p className="text-lg text-gray-500">+46 70 123 45 67</p>
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-700">Address</h3>
+            <h3 className="text-xl font-semibold text-gray-700">Adress</h3>
             <p className="text-lg text-gray-500">
-              123 Massage St, Stockholm, Sweden
+              Massagegatan 123, Stockholm, Sverige
             </p>
           </div>
         </div>
 
-        {/* Contact Form */}
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Send Us a Message
+            Skicka Ett Meddelande
           </h2>
           <form action="#" method="POST" className="space-y-4">
             <div>
@@ -52,14 +50,14 @@ export default function ContactPage() {
                 htmlFor="name"
                 className="block text-lg text-gray-700 mb-2"
               >
-                Your Name
+                Ditt Namn
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                placeholder="Your Full Name"
+                placeholder="Ditt Fullständiga Namn"
                 required
               />
             </div>
@@ -69,14 +67,14 @@ export default function ContactPage() {
                 htmlFor="email"
                 className="block text-lg text-gray-700 mb-2"
               >
-                Your Email
+                Din E-post
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                placeholder="Your Email Address"
+                placeholder="Din E-postadress"
                 required
               />
             </div>
@@ -86,13 +84,13 @@ export default function ContactPage() {
                 htmlFor="message"
                 className="block text-lg text-gray-700 mb-2"
               >
-                Your Message
+                Ditt Meddelande
               </label>
               <textarea
                 id="message"
                 name="message"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                placeholder="Write your message here"
+                placeholder="Skriv ditt meddelande här"
                 rows="6"
                 required
               />
@@ -103,7 +101,7 @@ export default function ContactPage() {
                 type="submit"
                 className="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition duration-200"
               >
-                Send Message
+                Skicka Meddelande
               </button>
             </div>
           </form>

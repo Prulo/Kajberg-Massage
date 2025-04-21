@@ -2,118 +2,113 @@ import Header from "../../app/components/Header";
 
 export default function PriserPage() {
   return (
-    <main className="min-h-screen p-6 bg-gray-50">
+    <main className="min-h-screen p-6 bg-gray-50 bg-gradient-to-b from-pink-50 to-white">
       <Header />
-      <section className="text-center py-20">
-        <h1 className="text-4xl font-bold mb-6">Massage Prices</h1>
-        <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
-          Explore our massage offerings. Choose the perfect option to unwind and
-          relax.
+      <section className="text-center py-14 pt-20">
+        <h1 className="text-4xl font-bold mb-6">Massagepriser</h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          Utforska vårt utbud av massagebehandlingar. Välj det perfekta
+          alternativet för att slappna av och återhämta dig.
         </p>
       </section>
 
       <section className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Massage 1 */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Swedish Massage
+            Klassisk massage
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            A soothing, full-body massage that promotes relaxation and reduces
+            En lugnande helkroppsmassage som främjar avslappning och minskar
             stress.
           </p>
           <div className="text-xl font-bold text-pink-600 mb-4">
-            1 hour - 600 SEK
+            1 timme – 600 kr
           </div>
           <p className="text-gray-500">
-            Relax your body and mind with gentle strokes and rhythmic
-            techniques.
+            Slappna av i kropp och sinne med mjuka rörelser och rytmiska
+            tekniker.
           </p>
         </div>
 
-        {/* Massage 2 */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Deep Tissue Massage
+            Djupvävnadsmassage
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            Targets deeper layers of muscle and connective tissue for pain
-            relief.
+            Riktar in sig på djupare muskel- och bindvävslager för
+            smärtlindring.
           </p>
           <div className="text-xl font-bold text-pink-600 mb-4">
-            1 hour - 750 SEK
+            1 timme – 750 kr
           </div>
           <p className="text-gray-500">
-            Perfect for chronic muscle tension or stiffness.
+            Perfekt för kronisk muskelspänning eller stelhet.
           </p>
         </div>
 
-        {/* Massage 3 */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Hot Stone Massage
+            Hot stone-massage
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            A relaxing massage with warm stones to ease muscle tension and
-            stress.
+            En avslappnande massage med varma stenar som lindrar
+            muskelspänningar och stress.
           </p>
           <div className="text-xl font-bold text-pink-600 mb-4">
-            1 hour - 800 SEK
+            1 timme – 800 kr
           </div>
           <p className="text-gray-500">
-            Heated stones promote deep relaxation and improve circulation.
+            Värmda stenar ger djup avslappning och förbättrad cirkulation.
           </p>
         </div>
 
-        {/* Massage 4 */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Sports Massage
+            Idrottsmassage
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            Focuses on muscle groups used in exercise to improve flexibility and
-            reduce soreness.
+            Fokuserar på muskelgrupper som används vid träning för ökad
+            rörlighet och minskad ömhet.
           </p>
           <div className="text-xl font-bold text-pink-600 mb-4">
-            1 hour - 700 SEK
+            1 timme – 700 kr
           </div>
           <p className="text-gray-500">
-            Ideal for athletes or anyone who experiences muscle stiffness after
-            physical activity.
+            Perfekt för idrottare eller dig som upplever muskelstelhet efter
+            fysisk aktivitet.
           </p>
         </div>
 
-        {/* Massage 5 */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Aromatherapy Massage
+            Aromaterapimassage
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            A relaxing massage with essential oils to balance your mind and
-            body.
+            En avslappnande massage med eteriska oljor som balanserar kropp och
+            sinne.
           </p>
           <div className="text-xl font-bold text-pink-600 mb-4">
-            1 hour - 700 SEK
+            1 timme – 700 kr
           </div>
           <p className="text-gray-500">
-            Enhances emotional and physical well-being through the use of
-            therapeutic oils.
+            Främjar emotionellt och fysiskt välbefinnande med hjälp av
+            terapeutiska oljor.
           </p>
         </div>
 
-        {/* Massage 6 */}
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h2 className="text-2xl font-semibold text-pink-600 mb-4">
-            Couples Massage
+            Par-massage
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            Enjoy a relaxing massage with your partner in a shared room.
+            Njut av en avslappnande massage tillsammans med din partner i samma
+            rum.
           </p>
           <div className="text-xl font-bold text-pink-600 mb-4">
-            1 hour - 1,200 SEK
+            1 timme – 1 200 kr
           </div>
           <p className="text-gray-500">
-            Perfect for relaxation and bonding with your loved one.
+            Perfekt för avslappning och gemenskap med din älskade.
           </p>
         </div>
       </section>

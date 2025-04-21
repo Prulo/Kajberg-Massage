@@ -18,13 +18,13 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="space-x-6 text-gray-600 text-sm font-medium hidden md:flex">
           <Link href="/" className="hover:text-pink-500 transition">
-            Home
+            Hem
           </Link>
           <Link href="/priser" className="hover:text-pink-500 transition">
             Priser
           </Link>
           <Link href="/contact" className="hover:text-pink-500 transition">
-            Contact
+            Kontakt
           </Link>
         </nav>
 
@@ -59,7 +59,7 @@ export default function Header() {
             className="block text-gray-600 text-lg hover:text-pink-500 transition"
             onClick={() => setIsMenuOpen(false)} // Close menu after clicking
           >
-            Home
+            Hem
           </Link>
           <Link
             href="/priser"
@@ -73,7 +73,7 @@ export default function Header() {
             className="block text-gray-600 text-lg hover:text-pink-500 transition"
             onClick={() => setIsMenuOpen(false)} // Close menu after clicking
           >
-            Contact
+            Kontakt
           </Link>
         </nav>
       </div>
