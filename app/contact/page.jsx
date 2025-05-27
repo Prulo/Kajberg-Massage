@@ -2,7 +2,7 @@ import Header from "../../app/components/Header";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen p-6 bg-gray-50 bg-gradient-to-b from-pink-50 to-white">
+    <main className="min-h-screen p-6 bg-gray-50 bg-gradient-to-b from-teal-50 to-white text-gray-800">
       <Header />
       <section className="text-center py-20 ">
         <h1 className="text-4xl font-bold mb-6">Kontakta Oss</h1>
@@ -14,7 +14,7 @@ export default function ContactPage() {
 
       <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
-          <h2 className="text-2xl font-semibold text-pink-600 mb-4">
+          <h2 className="text-2xl font-semibold text-teal-500 mb-4">
             Kom i Kontakt
           </h2>
           <p className="text-lg text-gray-600 mb-6">
@@ -41,7 +41,7 @@ export default function ContactPage() {
         </div>
 
         <div className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-semibold text-pink-600 mb-4">
+          <h2 className="text-2xl font-semibold text-teal-500 mb-4">
             Skicka Ett Meddelande
           </h2>
           <form action="#" method="POST" className="space-y-4">
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Ditt Fullständiga Namn"
                 required
               />
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Din E-postadress"
                 required
               />
@@ -89,7 +89,7 @@ export default function ContactPage() {
               <textarea
                 id="message"
                 name="message"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Skriv ditt meddelande här"
                 rows="6"
                 required
@@ -99,7 +99,7 @@ export default function ContactPage() {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition duration-200"
+                className="bg-teal-500 text-white px-8 py-3 rounded-lg hover:bg-teal-600 transition duration-200"
               >
                 Skicka Meddelande
               </button>

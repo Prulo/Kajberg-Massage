@@ -9,21 +9,27 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-gradient-to-b from-pink-50 to-white shadow-md fixed top-0 left-0 w-full z-50">
+    <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h2 className="text-2xl font-semibold text-gray-800">
-          Kajberg Massage
-        </h2>
-
+        <div className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Kajberg Massage Logo"
+            className="h-10 w-auto"
+          />
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Bergs Massage
+          </h2>
+        </div>
         {/* Desktop Navigation */}
         <nav className="space-x-6 text-gray-600 text-sm font-medium hidden md:flex">
-          <Link href="/" className="hover:text-pink-500 transition">
+          <Link href="/" className="hover:text-teal-500 transition">
             Hem
           </Link>
-          <Link href="/priser" className="hover:text-pink-500 transition">
+          <Link href="/priser" className="hover:text-teal-500 transition">
             Priser
           </Link>
-          <Link href="/contact" className="hover:text-pink-500 transition">
+          <Link href="/contact" className="hover:text-teal-500 transition">
             Kontakt
           </Link>
         </nav>
@@ -56,21 +62,21 @@ export default function Header() {
         <nav className="space-y-4 text-center">
           <Link
             href="/"
-            className="block text-gray-600 text-lg hover:text-pink-500 transition"
+            className="block text-gray-600 text-lg hover:text-teal-500 transition"
             onClick={() => setIsMenuOpen(false)} // Close menu after clicking
           >
             Hem
           </Link>
           <Link
             href="/priser"
-            className="block text-gray-600 text-lg hover:text-pink-500 transition"
+            className="block text-gray-600 text-lg hover:text-teal-500 transition"
             onClick={() => setIsMenuOpen(false)} // Close menu after clicking
           >
             Priser
           </Link>
           <Link
             href="/contact"
-            className="block text-gray-600 text-lg hover:text-pink-500 transition"
+            className="block text-gray-600 text-lg hover:text-teal-500 transition"
             onClick={() => setIsMenuOpen(false)} // Close menu after clicking
           >
             Kontakt
