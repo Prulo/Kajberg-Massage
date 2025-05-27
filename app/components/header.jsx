@@ -32,6 +32,9 @@ export default function Header() {
           <Link href="/contact" className="hover:text-teal-500 transition">
             Kontakt
           </Link>
+          <Link href="/userlogin" className="hover:text-teal-500 transition">
+            Log in
+          </Link>
         </nav>
 
         {/* Mobile Hamburger Icon */}
@@ -53,7 +56,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
@@ -63,23 +65,30 @@ export default function Header() {
           <Link
             href="/"
             className="block text-gray-600 text-lg hover:text-teal-500 transition"
-            onClick={() => setIsMenuOpen(false)} // Close menu after clicking
+            onClick={() => setIsMenuOpen(false)}
           >
             Hem
           </Link>
           <Link
             href="/priser"
             className="block text-gray-600 text-lg hover:text-teal-500 transition"
-            onClick={() => setIsMenuOpen(false)} // Close menu after clicking
+            onClick={() => setIsMenuOpen(false)}
           >
             Priser
           </Link>
           <Link
             href="/contact"
             className="block text-gray-600 text-lg hover:text-teal-500 transition"
-            onClick={() => setIsMenuOpen(false)} // Close menu after clicking
+            onClick={() => setIsMenuOpen(false)}
           >
             Kontakt
+          </Link>
+          <Link
+            href="/userlogin"
+            className="block text-gray-600 text-lg hover:text-teal-500 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Log in
           </Link>
         </nav>
       </div>
