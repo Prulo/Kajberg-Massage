@@ -2,26 +2,32 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { loginUser } from "@/app/actions/auth";
 
 export default function LoginPage() {
   const router = useRouter();
   const [error, setError] = useState("");
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const result = await loginUser(formData);
+    const email = formData.get("email");
+    const password = formData.get("password");
 
-    if (result.success) {
-      // Save to localStorage
-      localStorage.setItem("user", JSON.stringify(result.user));
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
 
-      // Redirect to dashboard
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
       router.push("/");
     } else {
-      setError(result.message);
+      setError("Fel e-post eller lösenord.");
     }
+  };
+
+  const handleCreateClick = () => {
+    router.push("/signup");
   };
 
   return (
@@ -53,6 +59,13 @@ export default function LoginPage() {
           className="w-full bg-teal-500 text-white py-2 rounded hover:bg-teal-600"
         >
           Logga in
+        </button>
+        <button
+          type="button"
+          onClick={handleCreateClick}
+          className="w-full mt-4 bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+        >
+          Skapa konto
         </button>
       </form>
     </div>
