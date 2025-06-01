@@ -1,12 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const router = useRouter();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    router.push("/");
+  };
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
@@ -21,8 +37,8 @@ export default function Header() {
             Bergs Massage
           </h2>
         </div>
-        {/* Desktop Navigation */}
-        <nav className="space-x-6 text-gray-600 text-sm font-medium hidden md:flex">
+
+        <nav className="space-x-6 text-gray-600 text-sm font-medium hidden md:flex items-center">
           <Link href="/" className="hover:text-teal-500 transition">
             Hem
           </Link>
@@ -32,12 +48,24 @@ export default function Header() {
           <Link href="/contact" className="hover:text-teal-500 transition">
             Kontakt
           </Link>
-          <Link href="/userlogin" className="hover:text-teal-500 transition">
-            Log in
-          </Link>
+
+          {user ? (
+            <>
+              <span className="text-gray-800">{user.name}</span>
+              <button
+                onClick={handleLogout}
+                className="text-red-500 hover:text-red-700 transition"
+              >
+                Logga ut
+              </button>
+            </>
+          ) : (
+            <Link href="/login" className="hover:text-teal-500 transition">
+              Logga in
+            </Link>
+          )}
         </nav>
 
-        {/* Mobile Hamburger Icon */}
         <button className="md:hidden text-gray-600" onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,13 +111,29 @@ export default function Header() {
           >
             Kontakt
           </Link>
-          <Link
-            href="/userlogin"
-            className="block text-gray-600 text-lg hover:text-teal-500 transition"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Log in
-          </Link>
+
+          {user ? (
+            <>
+              <span className="block text-gray-800">{user.name}</span>
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setIsMenuOpen(false);
+                }}
+                className="block text-red-500 hover:text-red-700 transition mx-auto"
+              >
+                Logga ut
+              </button>
+            </>
+          ) : (
+            <Link
+              href="/login"
+              className="block text-gray-600 text-lg hover:text-teal-500 transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Logga in
+            </Link>
+          )}
         </nav>
       </div>
     </header>
